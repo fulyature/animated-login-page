@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+
+  overflow: hidden;
+}
 .container {
   height: 100vh;
   display: flex;
@@ -88,73 +95,96 @@ button {
   width: 100%;
   height: 100%;
   background-image: url(images/leaf_01.png);
-  z-index: 2;
+  z-index: 3;
   background-repeat: no-repeat;
-  animation: moveDown 3s reverse infinite;
+  animation: moveDown 3s linear infinite;
+  position: absolute;
+  background-position: 120px -10px;
 }
 .leaf2 {
   width: 100%;
   height: 100%;
   background-image: url(images/leaf_02.png);
-  z-index: 2;
+  z-index: 3;
   background-repeat: no-repeat;
-  animation: moveDown 3s reverse infinite;
-  animation-delay: 1s;
+  animation: moveDown 3s linear infinite;
+  /* animation-delay: 1s; */
+  position: absolute;
+  background-position: 220px -10px;
 }
 .leaf3 {
   width: 100%;
   height: 100%;
   background-image: url(images/leaf_03.png);
-  z-index: 2;
+  z-index: 3;
   background-repeat: no-repeat;
-  animation: moveDown 3s reverse infinite;
-  animation-delay: 1s;
+  animation: moveDown 3s linear infinite;
+  /* animation-delay: 1s; */
+  background-position: 420px -10px;
+  position: absolute;
 }
 .leaf4 {
   width: 100%;
   height: 100%;
   background-image: url(images/leaf_04.png);
-  z-index: 2;
+  z-index: 3;
   background-repeat: no-repeat;
-  animation: moveDown 3s reverse infinite;
+  animation: moveDown 3s linear infinite;
+  background-position: 52% 10px;
+  position: absolute;
 }
 .leaf5 {
   width: 100%;
   height: 100%;
   background-image: url(images/leaf_03.png);
-  z-index: 2;
+  z-index: 3;
   background-repeat: no-repeat;
-  animation: moveDown 3s reverse infinite;
+  animation: moveDown 3s linear infinite;
+  background-position: 72% 10px;
+  position: absolute;
 }
-.leaf1 {
+.leaf6 {
   width: 100%;
   height: 100%;
   background-image: url(images/leaf_04.png);
   z-index: 2;
   background-repeat: no-repeat;
-  animation: moveDown 3s reverse infinite;
+  /* animation: moveDown 3s ease-in infinite; */
+  animation: moveDown 3s linear infinite;
+  background-position: 90% -10px;
+  position: absolute;
 }
 .girl {
   width: 100%;
   height: 100%;
   background-image: url(images/girl.png);
   background-repeat: no-repeat;
-  animation: left-move 3s linear infinite;
+  animation: left-move 9s linear infinite;
   position: absolute;
   background-position: right;
+  top: 155px;
 }
 
 @keyframes moveDown {
   0% {
-    transform: translateY(100%);
+    transform: translateY(0);
   }
 
   100% {
-    transform: translatey(0);
+    transform: translateY(100%);
   }
 }
-@keyframes left-move {
+/* @keyframes left-move {
   100% {
-    transform: translate(-2000px);
+    transform: translate(-10000px);
+  }
+} */
+@keyframes left-move {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
   }
 }
