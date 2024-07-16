@@ -39,8 +39,10 @@ body {
 }
 
 .content {
+  z-index: 2;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 380px;
   height: 340px;
@@ -48,18 +50,11 @@ body {
   border: 2px solid rgba(178, 165, 165, 0.327);
   color: #a52a2a;
   backdrop-filter: blur(18px);
-  z-index: 2;
   padding: 1rem;
   position: absolute;
+  gap: 1rem;
 }
-form {
-  width: 380px;
-  height: 340px;
-  margin: 1rem;
-}
-.input-box {
-  padding: 0.8rem;
-}
+
 input {
   height: 50px;
   width: 100%;
@@ -70,9 +65,7 @@ input {
   border-radius: 0.5rem;
   padding: 15px;
 }
-.btn-wrapper {
-  padding: 15px;
-}
+
 button {
   background-color: #a52a2a;
   color: white;
@@ -162,7 +155,8 @@ button {
   animation: left-move 9s linear infinite;
   position: absolute;
   background-position: right;
-  top: 155px;
+  /* top: 150px; */
+  background-size: 20% 40%;
 }
 
 @keyframes moveDown {
